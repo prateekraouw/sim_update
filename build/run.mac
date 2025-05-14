@@ -1,0 +1,26 @@
+# Run macro for Geant4 Beam Test Project
+
+# Verbosity
+/control/verbose 2
+/run/verbose 2
+/tracking/verbose 0
+
+# Initialize run
+/run/initialize
+
+# Set primary particle: proton beam
+/gun/particle proton
+/gun/energy 10 GeV
+
+# Set starting position (before tungsten block)
+/gun/position 0 0 -50 cm
+
+# Set beam direction (10 degrees from z-axis in yz plane)
+/gun/direction 0 0.173648 0.984808  # sin(10°), cos(10°)
+
+# Number of particles to generate
+/run/beamOn 100
+
+# Output files generated:
+# - trajectory_data.csv: Contains 6D vector data (x, px, y, py, z, pz) for particles at detectors
+# - particle_data.csv: Contains muon and pion data at each detector with energy values
