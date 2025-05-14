@@ -19,7 +19,7 @@
 /gun/direction 0 0.173648 0.984808  # sin(10°), cos(10°)
 
 # Number of particles to generate
-/run/beamOn 100
+/run/beamOn 10000
 
 # Output files generated:
 # - trajectory_data.csv: Contains 6D vector data (x, px, y, py, z, pz) for particles at detectors

@@ -1,0 +1,41 @@
+# Macro for running visualization 
+#
+/control/verbose 2
+/run/verbose 2
+/vis/verbose 2
+
+# Use OpenGL in immediate mode (good for debugging)
+/vis/open OGLI
+
+# Draw the geometry and set visualization attributes
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 90. 0.
+/vis/viewer/zoom 1.0
+/vis/scene/add/axes 0 0 0 100 cm
+
+# Draw smooth trajectories
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByParticleID-0/default/setStepPtsSize 2
+
+# Color settings for particles
+/vis/modeling/trajectories/drawByParticleID-0/set e- blue
+/vis/modeling/trajectories/drawByParticleID-0/set e+ red
+/vis/modeling/trajectories/drawByParticleID-0/set proton green
+/vis/modeling/trajectories/drawByParticleID-0/set gamma yellow
+/vis/modeling/trajectories/drawByParticleID-0/set neutron white
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ magenta
+/vis/modeling/trajectories/drawByParticleID-0/set pi- cyan
+/vis/modeling/trajectories/drawByParticleID-0/set pi0 orange
+/vis/modeling/trajectories/drawByParticleID-0/set mu+ magenta
+/vis/modeling/trajectories/drawByParticleID-0/set mu- cyan
+
+# Show event ID
+/vis/scene/add/text 0 0 -400 cm 24 0 0 Event ID
+
+# Set accumulation mode and number
+/vis/scene/endOfEventAction accumulate 10
+
+# Run some events
+/run/beamOn 10

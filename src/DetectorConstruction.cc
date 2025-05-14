@@ -150,7 +150,7 @@ G4VPhysicalVolume* DetectorConstruction::DefineVolumes()
                    fCylinderLV, false, 0, true);
   
   // RF Cavity (at 350 cm from block)
-  G4ThreeVector rfCavityPos = G4ThreeVector(0, 0, 350*cm);
+  G4ThreeVector rfCavityPos = G4ThreeVector(0, 0, 360*cm);
   G4Tubs* rfCavityS = new G4Tubs("RFCavity", 
                              rf_cavity_inner_radius, 
                              rf_cavity_outer_radius, 

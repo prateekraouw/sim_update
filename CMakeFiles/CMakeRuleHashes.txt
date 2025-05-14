@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+b2ca50544966cb557daca966249409bf B2/CMakeFiles/B2
+4fd6817f20c1748d63ef1b3e43200ec8 B3/CMakeFiles/B3
+6dbafd0caa9723f274e95360154139f9 B4/CMakeFiles/B4
+e7a599c7fbfb923ac10789a19598e9d2 CMakeFiles/basic
